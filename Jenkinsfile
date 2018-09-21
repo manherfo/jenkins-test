@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('Check logs') {
             steps {
-                filterLogs ('ERROR', 2)
+                sh "cat /var/lib/jenkins/jobs/$JOB_NAME/builds/$JOB_NUMBER"
             }
         }
     }
